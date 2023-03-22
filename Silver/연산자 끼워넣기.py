@@ -1,7 +1,7 @@
 N = int(input())
 num_list = list(map(int,input().split()))
 operator = list(map(int,input().split()))
-#최대,최소 값
+#최대,최소 값 
 minValue = 1e9
 maxValue = -1e9
 res=num_list[0]
