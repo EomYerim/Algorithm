@@ -12,7 +12,5 @@ def sums():
         for j in range(len(res[i])):
             if sum(res[i][j])==s:
                 cnt+=1
-
-
     return cnt
 print(sums())
