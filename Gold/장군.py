@@ -97,26 +97,7 @@ f = {0: ((-1, 0), (-2, 1)),
             5: ((0, -1), (1, -2)),
             6: ((0, -1), (-1, -2)),
             7: ((-1, 0), (-2, -1))}
-# bx=[
-#         [-1,0],
-# 		[0, 1],
-# 		[0, 1],
-# 		[1,0],
-# 		[1,0],
-# 		[0, -1],
-# 		[0,-1],
-# 		[-1, 0]
-# 	]
-# by=[
-#         [-2,1],
-# 		[-1, 2],
-# 		[1, 2],
-# 		[2,1],
-# 		[2,-1],
-# 		[1, -2],
-# 		[-1,-2],
-# 		[-2.-1]
-# ]
+
 
 def bfs():
     board = [[0] * 9 for _ in range(10)]
@@ -128,11 +109,14 @@ def bfs():
         for d in range(8):
             nr = xr + x[d]
             nc = xc + y[d]
+            print("zz",nr,nc)
             if nr<0 or nr>=10 or nc<0 or nc>=9 or board[nr][nc]:
                 continue
             for j,k in f[d]:
+                print(j)
+                print(k)
                 if (xr+j, xc+k) == (r2, c2):
-                    flag = False    # 그 방향으로 이동 불가 표시
+                    flag = False   
                     break
             if not visited:
                 continue
